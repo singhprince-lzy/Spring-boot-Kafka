@@ -1,0 +1,17 @@
+1.Start Zookeeper service
+==> (.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties)
+
+2.Start Kafka Service
+==> (.\bin\windows\kafka-server-start.bat .\config\server.properties)
+
+3. Create Topic
+==>(.\bin\windows\kafka-topics.bat --create --topic quickstart-events --bootstrap-server localhost:9000)
+
+4. Describe Topics
+==>(.\bin\windows\kafka-topics.bat --describe --topic quickstart-events --bootstrap-server localhost:9000)
+
+5. Create Producer server
+==>(.\bin\windows\kafka-console-producer.bat --topic Projectmgt --bootstrap-server localhost:9000)
+
+6. Create Consumer Server
+==>(.\bin\windows\kafka-console-consumer.bat --topic Projectmgt --bootstrap-server localhost:9000)
